@@ -1,0 +1,34 @@
+<div class="alert alert-success" role="alert">
+  <h1 class="text-center">Result Management System</h1>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" onclick="history.back()"><a href="#">back</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Result</li>
+  </ol>
+</nav>
+<h3 class="text-center">
+  <small class="text-muted ">Result</small>
+</h3>
+<table class="table table-bordered " class="card" style="margin: 0px auto;margin-right:auto;width: 18rem;">
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">Roll :</th>
+      <td>{{this.roll}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Name :</th>
+      <td>{{this.name}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Date of Birth :</th>
+      <td>{{this.date_of_birth}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Score :</th>
+      <td>{{this.score}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,43 @@
+<div class="alert alert-success" role="alert">
+  <h1 class="text-center">Result Management System</h1>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/record">All records</a></li>
+    <li class="breadcrumb-item active" aria-current="page">add new Result</li>
+  </ol>
+</nav>
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+</div>
+{{/if}}
+
+<form  action="addResult" method="post">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" >Roll no</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" name="roll"  required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  name="name" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" >Date of Birth</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" name="date_of_birth" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" >Score</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" name="score" required>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="clear" class="btn btn-primary">Clear</button>
+</form>

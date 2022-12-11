@@ -1,0 +1,9 @@
+This application starts with index.hbs page
+database/schema name = demo
+you have to create teachers and students table manually to run the application smoothly
+query to create teachers table: "create table demo.teachers (teacherid varchar(20) primary key,password varchar(25))"
+query to insert value in teachers table:"insert into demo.teachers values("1234","abc123")"
+----note: you have to enter above credentials while loging as teacher----
+query to create students table: "create table demo.students (roll numeric primary key,name varchar(25),date_of_birth date,score numeric)"
+
+database related info is available on .env file

@@ -1,0 +1,42 @@
+<div class="alert alert-success" role="alert">
+  <h1 class="text-center">Result Management System</h1>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" onclick="history.back()"><a href="#">back</a></li>
+    <li class="breadcrumb-item active" aria-current="page">All Record</li>
+  </ol>
+</nav>
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+</div>
+{{/if}}
+<div class="row d-flex justify-content-end" >
+    <div class="col-6 d-flex justify-content-end"><a href="/addResult" type="button" class="btn btn-primary align-self-center">Add Record</a></div>
+</div>
+<table class="table table-bordered" style="border:1px solid black;margin: left 50px;margin-right:auto;">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Roll no.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Score</th>
+      <th scope="col" class="text-end">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.roll}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.date_of_birth}}</td>
+      <td>{{this.score}}</td>
+      <td class="text-end">
+          <a href="/editResult/{{this.roll}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i></i>Edit</a>
+          <a href="/{{this.roll}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i></i>Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
